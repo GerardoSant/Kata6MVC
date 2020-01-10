@@ -1,11 +1,9 @@
 package Swing;
 
-
 import Controller.CommandFactory;
 import Model.Square;
 import Controller.Command;
 import View.SquareDisplay;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.Map;
