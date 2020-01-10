@@ -1,21 +1,15 @@
 package Swing;
 
 import View.MoveSquareDialog;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import static java.lang.Integer.parseInt;
 
 public class SwingMoveSquareDialog extends JDialog implements MoveSquareDialog {
 
-
     private int positionChange;
     private JFrame jframe;
     private JTextField jtfPositionChange;
-
 
     public SwingMoveSquareDialog(JFrame frame) {
         this.jframe=frame;
@@ -80,5 +74,4 @@ public class SwingMoveSquareDialog extends JDialog implements MoveSquareDialog {
         });
         return button;
     }
-
 }
