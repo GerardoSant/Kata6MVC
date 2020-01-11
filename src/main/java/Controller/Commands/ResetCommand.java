@@ -19,6 +19,7 @@ public class ResetCommand implements Command {
     }
 
     private void resetSquarePosition(){
+        System.out.println("aqui");
         square.setPosition(squareDisplay.getDisplayWidth()/2 - square.getSide()/2);
         squareDisplay.displaySquare(square);
     }

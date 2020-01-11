@@ -14,6 +14,10 @@ public class Square {
         return side;
     }
 
+    public void setSide(int side) {
+        this.side = side;
+    }
+
     public int getPosition() {
         return position;
     }

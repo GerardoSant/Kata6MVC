@@ -13,12 +13,13 @@ public class SwingMainFrame extends JFrame {
     private Square square;
     private SquareDisplay squareDisplay;
     private SwingMoveSquareDialog moveSquareDialog;
+    private SwingChangeSquareSizeDialog changeSquareSizeDialog;
     Map<String, Command> commands;
 
     public SwingMainFrame(Square square){
         this.square = square;
         createUI();
-        commands=new CommandFactory(squareDisplay, square, moveSquareDialog).build();
+        commands=new CommandFactory(squareDisplay, square, moveSquareDialog, changeSquareSizeDialog).build();
     }
 
     public void execute(){
@@ -27,6 +28,7 @@ public class SwingMainFrame extends JFrame {
 
     private void createUI() {
         moveSquareDialog = new SwingMoveSquareDialog(this);
+        changeSquareSizeDialog = new SwingChangeSquareSizeDialog(this);
         add(squareDisplay());
         add(buttonsPanel(),BorderLayout.SOUTH);
         setFrameSettings();
@@ -41,6 +43,7 @@ public class SwingMainFrame extends JFrame {
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.add(button("Reset"));
         buttonsPanel.add(button("Move"));
+        buttonsPanel.add(button("Change"));
         return buttonsPanel;
     }
 
